@@ -1,0 +1,228 @@
+@media(max-width:600px){
+
+  .contenedor-detalles{
+    width: 94%;
+    padding: 3%;
+    .contenedor-imagen{
+      margin-top: 10px;
+      text-align: center;
+      img{
+        width: 85%;
+        vertical-align: middle;
+      }
+    }
+    .contenedor-textos{
+      .nombre-instrumento{
+        font-size: 32px;
+        margin-top: 20px;
+        text-transform: uppercase;
+      }
+      .descripcion-instrumento{
+        font-size: 15px;
+        color: var(--color-texto-gris);
+      }
+      .disponibilidad-instrumento{
+        background-color: rgb(12, 170, 12);
+        color: white;
+        display: inline-block;
+        font-size: 11px;
+        padding: 1px 7px;
+        border-radius: 5px;
+      }
+      .no-disponibilidad-instrumento{
+        background-color: red;
+        color: white;
+        display: inline-block;
+        font-size: 11px;
+        padding: 1px 7px;
+        border-radius: 5px;
+      }
+      .precio-instrumento{
+        font-size: 25px;
+      }
+    }
+    .agregar-al-carrito{
+      .cantidad{
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 10px 0 3px 2px;
+        color: var(--color-secundario-azul);
+        font-weight: 500;
+      }
+      .disminuir-aumentar{
+        display: grid;
+        grid-template-columns: 1fr 7fr 1fr;
+        height: 38px;
+        button{
+          background-color: var(--color-secundario-azul);
+          color: var(--color-fondo-blanco);
+          font-size: 19px;
+        }
+        .aumentar{
+          border-radius: 50% 0 0 50%;;
+        }
+        .lblCantidad{
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--color-secundario-azul);
+        }
+        .disminuir{
+          border-radius: 0 50% 50% 0;
+        }
+      }
+      .boton-agregar{
+        margin-top: 10px;
+        height: 38px;
+        width: 100%;
+        border-radius: 20px;
+        font-size: 14px;
+        background-color: var(--color-secundario-azul);
+        color: var(--color-fondo-blanco);
+      }
+    }
+  }
+
+  .desactivado{
+    background-color: #818181 !important;
+  }
+  .texto-desactivado{
+    color: #818181 !important;
+  }
+
+}
+
+
+@media (min-width: 601px) {
+  .contenedor-detalles {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3%;
+    display: grid;
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: auto auto; /* Definimos que habrá dos filas de tamaño automático */
+    grid-gap: 20px; /* Espaciado entre los divs */
+  }
+
+  .contenedor-imagen {
+    margin-top: 20px;
+    text-align: center;
+    /* width: 500px;s */
+    grid-column: 1;
+  }
+
+  .contenedor-textos .descripcion-instrumento {
+    font-size: 18px;
+    color: var(--color-texto-gris);
+  }
+
+  .contenedor-imagen img {
+    width: 70%;
+    vertical-align: middle;
+  }
+
+  .contenedor-textos .nombre-instrumento {
+    font-size: 36px;
+    margin-top: 30px;
+    text-transform: uppercase;
+  }
+
+
+
+  .contenedor-imagen {
+    grid-column: 1; /* Imagen en la primera columna */
+    grid-row: span 2;
+  }
+
+  .contenedor-textos {
+    grid-column: 2; /* Textos en la segunda columna */
+  }
+
+  .agregar-al-carrito {
+    grid-column: 2; /* Carrito en la segunda columna, debajo de los textos */
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+
+
+  .contenedor-textos .disponibilidad-instrumento {
+    background-color: rgb(12, 170, 12);
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 5px;
+  }
+
+  .contenedor-textos .no-disponibilidad-instrumento {
+    background-color: red;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 5px;
+  }
+
+  .contenedor-textos .precio-instrumento {
+    font-size: 28px;
+  }
+
+  .agregar-al-carrito .cantidad {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 15px 0 5px 2px;
+    color: var(--color-secundario-azul);
+    font-weight: 500;
+  }
+
+  .disminuir-aumentar {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr;
+    height: 40px;
+  }
+
+  .disminuir-aumentar button {
+    background-color: var(--color-secundario-azul);
+    color: var(--color-fondo-blanco);
+    font-size: 20px;
+  }
+
+  .disminuir-aumentar .aumentar {
+    border-radius: 50% 0 0 50%;
+  }
+
+  .disminuir-aumentar .lblCantidad {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secundario-azul);
+  }
+
+  .disminuir-aumentar .disminuir {
+    border-radius: 0 50% 50% 0;
+  }
+
+  .boton-agregar {
+    margin-top: 15px;
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: var(--color-secundario-azul);
+    color: var(--color-fondo-blanco);
+  }
+
+  .desactivado {
+    background-color: #818181 !important;
+  }
+
+  .texto-desactivado {
+    color: #818181 !important;
+  }
+}

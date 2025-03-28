@@ -1,0 +1,65 @@
+<nav class="header">
+  <div>
+  <button class="icono-navbar" (click)="mostrarNavBar()"><mat-icon>menu</mat-icon></button>
+  </div>
+  <div class="contenedor-imagen">
+    <a [routerLink]="['../home']">
+      <img class="logo-imagen" src="https://storagemusikastudio.blob.core.windows.net/iconos/imagenLogoLuis.jpeg" alt="Logo Tienda Musica">
+    </a>
+  </div>
+  <div>
+    <a style="cursor: pointer;" *ngIf="storage; else logueado" [routerLink]="['../login']"><img class="desconocido-imagen" src="https://w7.pngwing.com/pngs/858/581/png-transparent-profile-icon-user-computer-icons-system-chinese-wind-title-column-miscellaneous-service-logo.png" alt="" width="40px"></a>
+    <ng-template #logueado>
+      <a style="cursor: pointer;" (click)="salir()" ><img class="salir-imagen" src="https://e7.pngegg.com/pngimages/660/729/png-clipart-computer-icons-login-icon-design-exit-miscellaneous-angle.png" alt="" width="40px"></a>
+    </ng-template>
+  </div>
+</nav>
+
+<nav id="navbar">
+  <div class="navbar-div-audio-cerrar">
+    <a (click)="contraerNavBar()" [routerLink]="['instrumento', '']" ><strong>Ver todo</strong></a>
+    <button class="bonton-cerrar" (click)="contraerNavBar()"><mat-icon>close</mat-icon></button>
+  </div>
+  <ul class="listado-instrumentos listado-instrumentos-desplegable">
+    <li><a (click)="contraerNavBar()" [routerLink]="['instrumento', 'AUDIO']" ><mat-icon class="icon" id="icon1">mic</mat-icon>Audio</a></li>
+    <li><a (click)="contraerNavBar()" [routerLink]="['instrumento', 'GUITARRA']" ><i class="fa-solid fa-guitar icon"></i>Guitarras</a></li>
+    <li><a (click)="contraerNavBar()" [routerLink]="['instrumento', 'BAJO']" ><img class="icon" src="https://storagemusikastudio.blob.core.windows.net/iconos/icon-bass.svg" alt="" width="26px">Bajos</a></li>
+    <li><a (click)="contraerNavBar()" [routerLink]="['instrumento', 'TECLADO']" ><mat-icon class="icon">piano</mat-icon>Teclados</a></li>
+    <li><a (click)="contraerNavBar()" [routerLink]="['instrumento', 'BATERIA']" ><img class="icon" src="https://storagemusikastudio.blob.core.windows.net/iconos/icon-drum.svg" alt="" width="26px">Baterias</a></li>
+    <li><a (click)="contraerNavBar()" [routerLink]="['instrumento', 'TIMBAL']" ><i class="fa-solid fa-drum icon"></i>Timbales</a></li>
+  </ul>
+</nav>
+
+<div class="relleno"></div>
+
+<router-outlet></router-outlet>
+
+<div *ngIf="!storage" class="carrito">
+  <img style="cursor: pointer;" [routerLink]="['/home/carrito']" class="carrito-img" src="https://storagemusikastudio.blob.core.windows.net/iconos/carrito.png" alt="">
+</div>
+
+<div class="footer">
+  <div class="contenedor-logos">
+    <img width="170px" class="logo" src="https://static.vecteezy.com/system/resources/previews/009/379/175/non_2x/letter-a-with-pulse-music-player-element-logo-template-electronic-music-equalizer-store-dj-music-nightclub-disco-audio-wave-logo-concept-multimedia-technology-themed-abstract-shape-vector.jpg" alt="logo">
+    <div class="logos">
+      <a title="Facebook" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a title="WhatsApp" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      <a title="Instagram" href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a title="TikTok" href="#"><i class="fa-brands fa-tiktok"></i></a>
+    </div>
+  </div>
+  <div class="contenedor-textos">
+    <div class="derechos-reservados">
+      <p><strong>MusikaStudio &copy; 2024</strong></p>
+      <p>todos los derechos reservados</p>
+    </div>
+    <div class="contactanos">
+      <h4><strong>Contactanos</strong></h4>
+      <p>ventasweb&#64;musikastudio.com</p>
+      <p>online&#64;musikastudio.com</p>
+      <p>telefono: 928109364</p>
+      <p>lun a sab 10am - 8pm</p>
+    </div>
+  </div>
+
+</div>

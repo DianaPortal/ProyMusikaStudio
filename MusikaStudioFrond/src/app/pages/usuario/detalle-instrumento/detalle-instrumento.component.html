@@ -1,0 +1,23 @@
+<div class="contenedor-detalles">
+  <div class="contenedor-imagen">
+    <img [src]="instrumento.imagen" alt="imagen instrumento">
+  </div>
+  <div class="contenedor-textos">
+    <h3 class="nombre-instrumento">{{instrumento.nombre}}</h3>
+    <p class="descripcion-instrumento">{{instrumento.descripcion}}</p>
+    <p class="disponibilidad-instrumento" *ngIf="instrumento.stock > 0; else sinStock">disponible</p>
+    <ng-template #sinStock>
+      <p class="no-disponibilidad-instrumento">Sin stock</p>
+    </ng-template>
+    <p class="precio-instrumento">Precio S/ {{instrumento.precio}}</p>
+  </div>
+  <div class="agregar-al-carrito">
+    <p [ngClass]="{'texto-desactivado': instrumento.stock == 0}" class="cantidad">cantidad</p>
+    <div class="disminuir-aumentar">
+      <button class="aumentar" (click)="disminuir()" [ngClass]="{'desactivado': instrumento.stock == 0}" type="button">-</button>
+      <label class="lblCantidad" [ngClass]="{'texto-desactivado': instrumento.stock == 0}" for="cantidad">{{cantidad}}</label>
+      <button class="disminuir" (click)="aumentar()" [ngClass]="{'desactivado': instrumento.stock == 0}" type="button">+</button>
+    </div>
+    <button class="boton-agregar" [ngClass]="{'desactivado': instrumento.stock == 0}" (click)="agregarAlCarrito()">Agregar al carro</button>
+  </div>
+</div>

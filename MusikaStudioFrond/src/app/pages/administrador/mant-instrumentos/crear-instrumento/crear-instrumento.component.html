@@ -1,0 +1,71 @@
+<mat-dialog-content>
+
+  <h1>Registrar Instrumento</h1>
+
+  <form class="formularioRegistrar" [formGroup]="formularioRegistrar">
+
+    <div>
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" formControlName="nombre">
+    </div>
+
+    <div>
+      <label for="imagen">Imagen</label>
+      <input type="text" id="imagen" formControlName="imagen">
+    </div>
+
+    <div>
+      <label for="descripcion">Descripcion</label>
+      <input type="text" id="descripcion" formControlName="descripcion">
+    </div>
+
+    <div>
+      <label for="precio">Precio</label>
+      <input type="number" id="precio" formControlName="precio">
+    </div>
+
+
+    <div class="div-autocomplete">
+
+      <!-- CATEGORIA -->
+      <mat-form-field appearance="fill">
+        <mat-label>Categoría</mat-label>
+        <input
+        matInput
+        [formControl]="categoriaControl"
+        [matAutocomplete]="auto"
+        placeholder="Escribe una categoría"
+        />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let categoria of categoriasFiltradas$ | async" [value]="categoria.nombre">
+            {{ categoria.nombre }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+      <!-- MARCA -->
+      <mat-form-field appearance="fill">
+        <mat-label>Marca</mat-label>
+        <input
+        matInput
+        [formControl]="rolControl"
+        [matAutocomplete]="roles"
+        placeholder="Escribe una marca"
+        />
+        <mat-autocomplete #roles="matAutocomplete">
+          <mat-option *ngFor="let rol of rolesFiltrados$ | async" [value]=" rol.nombre">
+            {{ rol.nombre }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+
+    </div>
+
+    <main class="contenedor-enviar">
+      <button class="botonEnviar" (click)="onSubmit()" mat-button [mat-dialog-close]="true" >Registrar</button>
+    </main>
+
+  </form>
+
+
+</mat-dialog-content>

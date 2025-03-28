@@ -1,0 +1,17 @@
+<nav class="header">
+  <div class="contenedor-imagen">
+    <a [routerLink]="['./']">
+      <img class="logo-imagen" src="https://storagemusikastudio.blob.core.windows.net/iconos/imagenLogoLuis.jpeg" alt="Logo Tienda Musica">
+    </a>
+  </div>
+  <div class="contenedor-enlaces">
+    <ul class="lista-enlaces">
+      <li class="lista-item"><a [routerLink]="['./']" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true}">Instrumentos</a></li>
+      <li class="lista-item"><a [routerLink]="['./usuario']" routerLinkActive="activo" >Usuarios</a></li>
+    </ul>
+  </div>
+  <div class="contenedor-salir">
+      <a (click)="salir()" ><img class="salir-imagen" src="https://e7.pngegg.com/pngimages/660/729/png-clipart-computer-icons-login-icon-design-exit-miscellaneous-angle.png" alt="" width="40px"></a>
+  </div>
+</nav>
+<router-outlet></router-outlet>

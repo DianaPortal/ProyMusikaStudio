@@ -1,0 +1,28 @@
+<section class="contenedor-productos-mas-vendidos">
+  <h2 style="font-size: 30px; margin-top: 80px;">{{tituloSeccion}}</h2>
+  <div class="contenedores-instrumentos">
+
+    <!-- <a [routerLink]="['../../det-instrumento', item.idInstrumento]" *ngFor="let item of listaProductosMasVendidos"> -->
+
+    <a [routerLink]="[rutaRelativa, item.idInstrumento]" *ngFor="let item of listaProductosMasVendidos">
+      <div class="card-instrumento">
+        <div class="contenedor-imagen" [ngStyle]="{'background-image':'url('+ item.imagen +')'}">
+        </div>
+        <div class="contenedor-textos">
+          <p class="instrumento-nombre">{{item.nombre}}</p>
+          <p class="instrumento-stock texto-inferior">Stock: {{item.stock}}</p>
+          <p class="instrumento-precio texto-inferior">S/ {{item.precio}}</p>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- <mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Seleccionar página"
+              (page)="onPageChange($event)">
+  </mat-paginator> -->
+
+</section>

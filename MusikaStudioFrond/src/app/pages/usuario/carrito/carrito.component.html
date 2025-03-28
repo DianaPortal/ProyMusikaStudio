@@ -1,0 +1,9 @@
+<app-card-carrito [idUsuario]="idUsuario" [venta]="venta"></app-card-carrito>
+
+<div class="contenedor-comprar">
+  <input style="cursor: pointer;" *ngIf="!carritoVacio; else noHayNada" (click)="continuarConLaCompra()" type="text" value="Continuar con la compra" readonly>
+  <ng-template #noHayNada class="contenedor-condicional">
+    <h4 class="tituto-texto-vacio">Ningun producto en el carrito, explora nuestra tienda :)</h4>
+  </ng-template>
+</div>
+

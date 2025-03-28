@@ -1,0 +1,145 @@
+@media (max-width:600px){
+  .contenedor-productos-mas-vendidos{
+    display: block;
+    margin-bottom: 30PX;
+    h2{
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+  .example-card {
+    max-width: 400px;
+    border: 2px solid black;
+  }
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .contenedores-instrumentos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+    .card-instrumento{
+      width: 100%;
+      min-height: 287px;
+      border: 1px solid var(--color-borde-tarjetas);
+      border-radius: 5px;
+      .contenedor-imagen{
+        width: 90%;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 7px 10px 15px;
+      }
+      .contenedor-textos{
+        height: 70px;
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .instrumento-nombre{
+          overflow: hidden;
+          height: 40px;
+        }
+        .instrumento-precio{
+          background-color: var(--color-secundario-azul);
+          padding: 4px 15px;
+          color: var(--color-texto-blanco);
+        }
+        .texto-inferior{
+          margin-top: -10px;
+        }
+        .instrumento-stock{
+          font-size: 11px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 601px) {
+  .contenedor-productos-mas-vendidos {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .contenedor-productos-mas-vendidos h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .example-card {
+    max-width: 600px;
+    border: 2px solid black;
+  }
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  .contenedores-instrumentos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .card-instrumento {
+    width: 100%;
+    min-height: 350px;
+    border: 1px solid var(--color-borde-tarjetas);
+    border-radius: 5px;
+  }
+
+  .card-instrumento .contenedor-imagen {
+    width: 90%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 10px 15px 20px;
+  }
+
+  .card-instrumento .contenedor-textos {
+    height: 90px;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card-instrumento .contenedor-textos .instrumento-nombre {
+    overflow: hidden;
+    height: 50px;
+  }
+
+  .card-instrumento .contenedor-textos .instrumento-precio {
+    background-color: var(--color-secundario-azul);
+    padding: 6px 20px;
+    color: var(--color-texto-blanco);
+  }
+
+  .card-instrumento .contenedor-textos .texto-inferior {
+    margin-top: -10px;
+  }
+
+  .card-instrumento .contenedor-textos .instrumento-stock {
+    font-size: 12px;
+    width: 100%;
+  }
+}

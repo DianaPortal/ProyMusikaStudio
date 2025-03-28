@@ -1,0 +1,22 @@
+<div class="contenedor-carrito" *ngFor="let item of venta?.detallesVenta">
+  <div class="contenedor-imagen">
+    <img [src]="item.instrumento?.imagen" [alt]="item.instrumento?.nombre">
+  </div>
+  <div class="contenedor-textos">
+    <p class="nombre-producto">{{item.instrumento?.nombre}}</p>
+    <div class="contenedor-numeros">
+      <p class="subTotal">Total: S/ {{item.subTotal}}</p>
+      <small class="cantidad">cantidad x{{item.cantidad}}</small>
+    </div>
+  </div>
+  <div class="contenedor-eliminar">
+    <a *ngIf="item.instrumento?.idInstrumento !== undefined"
+   (click)="eliminar(item.instrumento?.idInstrumento!)">
+  <mat-icon>delete</mat-icon>
+</a>
+  </div>
+</div>
+
+<ng-template #cargando>
+  <mat-spinner #cargando diameter="30" color="blue"></mat-spinner>
+</ng-template>

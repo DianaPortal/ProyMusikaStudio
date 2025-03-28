@@ -1,0 +1,17 @@
+<div class="dsc-carousel">
+  <div class="dsc-carousel_btns">
+    <i class="fa fa-chevron-circle-left" id="flecha" (click)="setBack()"></i>
+    <i class="fa fa-chevron-circle-right" id="flecha" (click)="setNext()"></i>
+  </div>
+  <div class="dsc-carousel_content">
+    <ng-container *ngFor="let section of listImgCarrusel">
+      <div class="dsc-carousel_content-item" [ngStyle]="{'background-image':'url('+ section.url +')', 'margin-left': section.marginLeft + '%'}">
+      </div>
+    </ng-container>
+  </div>
+    <div class="dsc-carousel_steps">
+      <div class="dsc-carousel_steps-steps div-{{currentPosition === item.id ? 'activo' : ''}}" *ngFor="let item of listImgCarrusel" (click)="setCurrentPosition(item.id)">
+
+      </div>
+    </div>
+</div>

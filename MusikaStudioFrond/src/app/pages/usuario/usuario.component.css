@@ -1,0 +1,272 @@
+@media (max-width:600px) {
+
+  .header{
+    background-color: var(--color-fondo-gris-claro);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+    div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .icono-navbar{
+    cursor: pointer;
+  }
+
+  .relleno{
+    height: 85px;
+  }
+
+  .logo-imagen{
+    width: 170px;
+    height: 85px;
+  }
+
+  #navbar{
+    width: 70vw;
+    height: 100vh;
+    background-color: #4f5f8b;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: .5s;
+    z-index: 50;
+  }
+
+  .bonton-cerrar{
+    background-color: #4f5f8b;
+    margin-bottom: -7px;
+  }
+
+  .navbar-div-audio-cerrar{
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    margin: 30px 30px 25px 30px;
+    a {
+      font-size: 25px;
+    }
+  }
+
+  .listado-instrumentos{
+    margin: 0 30px 0 30px;
+    li {
+      margin: 15px 0;
+    }
+  }
+
+  a{
+    display: flex;
+    align-items: center;
+    color: inherit;
+    font-size: 20px;
+  }
+
+
+  .icon{
+    font-size: 25px;
+    padding: 16px 0;
+    margin-top: -2px;
+    margin-right: 7px;
+    vertical-align: middle;
+  }
+
+  #icon1{
+    margin-right: 10px;
+  }
+
+  /* footer */
+  .footer{
+    margin-top: 40px;
+    background-color: var(--color-fondo-gris-claro);
+    padding: 20px 0;
+    text-align: center;
+    .contenedor-logos{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 60px;
+      img{
+        margin-bottom: 20px;
+      }
+      .logos{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+    .contenedor-textos{
+      .derechos-reservados{
+        margin-bottom: 60px;
+        p{
+          margin-top: -8px;
+        }
+      }
+      .contactanos{
+        p{
+          margin-top: -8px;
+        }
+      }
+    }
+  }
+
+  .salir-imagen{
+    width: 28px;
+  }
+
+  .carrito .carrito-img{
+    position: fixed;
+    z-index: 10;
+    width: 90px;
+    right: 0;
+    filter: drop-shadow(0 0 5px black);
+    bottom: 2%;
+  }
+}
+
+
+@media (min-width: 601px) {
+  .header {
+    background-color: var(--color-fondo-gris-claro);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+  }
+
+  .header div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icono-navbar {
+    cursor: pointer;
+  }
+
+  .relleno {
+    height: 85px;
+  }
+
+  .logo-imagen {
+    width: 200px;
+    height: 100px;
+  }
+
+  #navbar {
+    width: 300px;
+    height: 100vh;
+    background-color: #4f5f8b;
+    position: fixed;
+    transform: translateX(-100%);
+    transition: .5s;
+    z-index: 50;
+  }
+
+  .bonton-cerrar {
+    background-color: #4f5f8b;
+    margin-bottom: -7px;
+  }
+
+  .navbar-div-audio-cerrar {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    margin: 30px 30px 25px 30px;
+  }
+
+  .navbar-div-audio-cerrar a {
+    font-size: 25px;
+  }
+
+  .listado-instrumentos {
+    margin: 0 30px 0 30px;
+  }
+
+  .listado-instrumentos li {
+    margin: 15px 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    color: inherit;
+    font-size: 20px;
+  }
+
+
+  .icon {
+    font-size: 25px;
+    padding: 16px 0;
+    margin-top: -2px;
+    margin-right: 7px;
+    vertical-align: middle;
+  }
+
+  #icon1 {
+    margin-right: 10px;
+  }
+
+  .footer {
+    margin-top: 40px;
+    background-color: var(--color-fondo-gris-claro);
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .footer .contenedor-logos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+
+  .footer .contenedor-logos img {
+    margin-bottom: 20px;
+  }
+
+  .footer .contenedor-logos .logos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer .contenedor-textos .derechos-reservados {
+    margin-bottom: 60px;
+  }
+
+  .footer .contenedor-textos .derechos-reservados p {
+    margin-top: -8px;
+  }
+
+  .footer .contenedor-textos .contactanos p {
+    margin-top: -8px;
+  }
+
+  .salir-imagen {
+    width: 28px;
+  }
+
+  .carrito .carrito-img {
+    position: fixed;
+    z-index: 10;
+    width: 90px;
+    right: 0;
+    filter: drop-shadow(0 0 5px black);
+    bottom: 2%;
+  }
+}
+

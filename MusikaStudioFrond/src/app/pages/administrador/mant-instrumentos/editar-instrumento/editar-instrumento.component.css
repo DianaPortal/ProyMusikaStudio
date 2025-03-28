@@ -1,0 +1,33 @@
+div{
+  margin: 25px 0;
+  label{
+    margin: 0 20px 0 0;
+  }
+  input{
+    border: 2px solid rgb(189, 189, 189);
+    height: 20px;
+    padding-left: 5px;
+  }
+}
+
+.div-autocomplete{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contenedor-enviar{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  .botonEnviar{
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+  }
+}
+
+div > input{
+  height: 30px;
+  width: 100%;
+}

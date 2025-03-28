@@ -1,0 +1,10 @@
+<div class="contenedor-principal">
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="formularioBuscar" class="contenedor-buscar">
+    <input class="input-nombre" type="text" placeholder="buscar..." formControlName="nombre" >
+    <input class="input-enviar" type="submit" value="Buscar" />
+  </form>
+
+  <app-card-instrumento [rutaRelativa]="rutaRelativa" [tituloSeccion]="tituloSeccion" [listaProductosMasVendidos]="instrumento"></app-card-instrumento>
+
+</div>

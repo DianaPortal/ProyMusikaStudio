@@ -1,0 +1,99 @@
+<div class="contenedor-login">
+  <div class="login-box">
+    <h2>Crear una cuenta</h2>
+    <form [formGroup]="formularioRegistrar" (ngSubmit)="onSubmit()">
+
+      <div class="user-box">
+        <input type="text" formControlName="nombre">
+        <label>Nombre</label>
+        <small *ngIf="formularioRegistrar.get('nombre')?.hasError('required') && formularioRegistrar.get('nombre')?.touched">
+          El nombre es obligatorio.
+        </small>
+        <small *ngIf="formularioRegistrar.get('nombre')?.hasError('minlength') && formularioRegistrar.get('nombre')?.touched">
+          El nombre debe tener al menos 3 caracteres.
+        </small>
+        <small *ngIf="formularioRegistrar.get('nombre')?.hasError('pattern') && formularioRegistrar.get('nombre')?.touched">
+          El nombre solo debe contener letras y.
+        </small>
+      </div>
+
+      <div class="user-box">
+        <input type="text" formControlName="apellido">
+        <label>Apellido</label>
+        <small *ngIf="formularioRegistrar.get('apellido')?.hasError('required') && formularioRegistrar.get('apellido')?.touched">
+          El apellido es obligatorio.
+        </small>
+        <small *ngIf="formularioRegistrar.get('apellido')?.hasError('minlength') && formularioRegistrar.get('apellido')?.touched">
+          El apellido debe tener al menos 3 caracteres.
+        </small>
+        <small *ngIf="formularioRegistrar.get('apellido')?.hasError('pattern') && formularioRegistrar.get('apellido')?.touched">
+          El apellido solo puede contener letras y espacios.
+        </small>
+      </div>
+
+      <div class="user-box">
+        <input type="text" formControlName="telefono">
+        <label>Teléfono</label>
+        <small *ngIf="formularioRegistrar.get('telefono')?.hasError('required') && formularioRegistrar.get('telefono')?.touched">
+          El teléfono es obligatorio.
+        </small>
+        <small *ngIf="formularioRegistrar.get('telefono')?.hasError('pattern') && formularioRegistrar.get('telefono')?.touched">
+          El teléfono debe ser un número válido de 9 dígitos.
+        </small>
+      </div>
+
+      <div class="user-box">
+        <input type="text" formControlName="direccion">
+        <label>Dirección</label>
+        <small *ngIf="formularioRegistrar.get('direccion')?.hasError('required') && formularioRegistrar.get('direccion')?.touched">
+          La dirección es obligatoria.
+        </small>
+        <small *ngIf="formularioRegistrar.get('direccion')?.hasError('minlength') && formularioRegistrar.get('direccion')?.touched">
+          La dirección debe tener al menos 5 caracteres.
+        </small>
+        <small *ngIf="formularioRegistrar.get('direccion')?.hasError('maxlength') && formularioRegistrar.get('direccion')?.touched">
+          La dirección no debe exceder los 100 caracteres.
+        </small>
+      </div>
+
+      <div class="user-box">
+        <input type="text" formControlName="correo">
+        <label>Correo</label>
+        <small *ngIf="formularioRegistrar.get('correo')?.hasError('required') && formularioRegistrar.get('correo')?.touched">
+          El correo es obligatorio.
+        </small>
+        <small *ngIf="formularioRegistrar.get('correo')?.hasError('email') && formularioRegistrar.get('correo')?.touched">
+          Debe ingresar un correo válido.
+        </small>
+      </div>
+
+      <div class="user-box">
+        <input type="text" formControlName="dni">
+        <label>DNI</label>
+        <small *ngIf="formularioRegistrar.get('dni')?.hasError('required') && formularioRegistrar.get('dni')?.touched">
+          El DNI es obligatorio.
+        </small>
+        <small *ngIf="formularioRegistrar.get('dni')?.hasError('pattern') && formularioRegistrar.get('dni')?.touched">
+          El DNI debe contener exactamente 8 dígitos numéricos.
+        </small>
+      </div>
+
+      <div class="user-box">
+        <input type="password" formControlName="contrasenia">
+        <label>Contraseña</label>
+        <small *ngIf="formularioRegistrar.get('contrasenia')?.hasError('required') && formularioRegistrar.get('contrasenia')?.touched">
+          La contraseña es obligatoria.
+        </small>
+      </div>
+      <div class="enviar-snniper">
+        <input type="submit" value="Crear cuenta" action="submit"/>
+        <mat-spinner *ngIf="loading == true" diameter="30" color="blue"></mat-spinner>
+      </div>
+    </form>
+    <p class="parrafo-registrarse">
+      ¿Ya tienes una cuenta?
+      <a class="enlace-registrarse" [routerLink]="['/login']">Ingrese aquí</a>
+    </p>
+  </div>
+</div>
+

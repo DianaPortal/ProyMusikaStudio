@@ -1,0 +1,14 @@
+@media (max-width:600px) {
+
+  .contenedor-principal{
+    padding: 0 2.5%;
+  }
+
+}
+
+
+@media (min-width: 601px) {
+  .contenedor-principal {
+    padding: 0 6%;
+  }
+}

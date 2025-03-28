@@ -1,0 +1,23 @@
+<mat-dialog-content>
+
+    <h1>Realizar Compra</h1>
+
+  <form action="" [formGroup]="formularioRegistrar"  (ngSubmit)="onSubmit()">
+
+    <div>
+      <label class="form-label" for="">Metodo de pago</label>
+      <select formControlName="metodoPagoId" class="form-select input-enviar" aria-label="Default select example">
+       <option selected value="1">Efectivo</option>
+       <option value="2">Transferencia</option>
+       <option value="3">Tarjeta</option>
+    </select>
+    </div>
+
+    <div class="contenedor-boton-enviar">
+      <button style="color: white;" class="botonEnviar" type="submit" mat-button [mat-dialog-close]="true" >Comprar</button>
+    </div>
+
+  </form>
+
+
+</mat-dialog-content>

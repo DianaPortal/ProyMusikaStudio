@@ -1,0 +1,42 @@
+.header{
+  height: 100px;
+  display: grid;
+  background-color: var(--color-fondo-gris-claro);
+  grid-template-columns: 1fr 4fr 1fr;
+  div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+}
+
+.contenedor-imagen{
+  margin-bottom: -7px;
+}
+
+.lista-enlaces{
+  color: black;
+  font-size: 25px;
+  display: flex;
+  gap: 25%;
+  li{
+    a{
+      color: black;
+      padding: 10px 20px;
+    }
+  }
+  text-decoration: none !important;
+}
+
+.logo-imagen{
+  width: 140px;
+}
+
+.activo{
+  border-bottom: 3px solid black;
+}
+
+.salir-imagen{
+  cursor: pointer;
+}

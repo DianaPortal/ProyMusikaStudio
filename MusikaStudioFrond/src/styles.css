@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root{
+
+  /* fondos */
+  --color-fondo-blanco: #FFFFFF;
+  --color-fondo-gris-claro: #f3f3f3;
+
+
+  /* colores */
+  --color-primario-negro: #000000;
+  --color-primario-dorado: #FFBF00;
+
+  --color-secundario-rojo: #8B0000;
+  --color-secundario-azul: #1E3A8A;
+
+  --color-terciario-rojo: #730076;
+  --color-terciario-azul: #0A6909;
+
+
+  /* colores textos */
+  --color-texto-blanco: rgb(255, 255, 255);
+  --color-texto-gris: #444444;
+
+
+  /* bordes */
+  --color-borde-tarjetas: rgb(161, 161, 161);
+
+
+  /* tipografia */
+  --tipografia-principal: 'Poppins', sans-serif;
+  --tipografia-secundaria: 'Lato', sans-serif;
+  --tipografia-terciaria: 'Roboto', sans-serif;
+
+
+  /* tamaño responsivo */
+  --ancho-maximo: 600px
+
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*  DIMENSIONES RESPONSIVE SAMSUNG GALAXY S8+  */
