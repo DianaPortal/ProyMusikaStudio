@@ -1,0 +1,5 @@
+# Created at 2024-11-24T14:41:51.905
+Boot Manifest-JAR contains absolute paths in classpath 'D:\ESTUDIOS\V CICLO\APLICACIONES WEB I\Versiones\MusikaStudio\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
